@@ -1,0 +1,62 @@
+<ion-content padding [@fadeIn]="viewDidEnterAnimate">
+  <ion-grid class="height-100">
+
+    <ion-row class="height-100" align-items-center justify-content-center>
+
+      <ion-col col-xl-4 col-lg-6 col-12 align-self-center text-center>
+
+          <h1 [@rubberBand]="canAnimate" text-uppercase ion-text color="white">
+            <ion-icon [@bounceInLeft]="canAnimate"
+              class="st-icon-st st-icon-small"
+              ion-text 
+              color="secondary"></ion-icon>  
+              &#8226; Sarah Tully</h1>
+
+          <div [@flip]="canAnimate" align-self-center class="sarahtully-background"></div>
+
+          <ion-row padding-top>
+            <ion-fab center [@fadeIn]="canAnimate" >
+              <button ion-fab color="secondary"><ion-icon name="md-share"></ion-icon></button>
+              <ion-fab-list side="left">
+                <button ion-fab color="light" (click)="goGithub()"><ion-icon name="logo-github"></ion-icon></button>
+              </ion-fab-list>
+              <ion-fab-list side="right">
+                <button ion-fab color="light" (click)="goLinkedin()"><ion-icon name="logo-linkedin"></ion-icon></button>
+              </ion-fab-list>
+              <ion-fab-list side="bottom">
+                <button ion-fab color="light" (click)="goTwitter()"><ion-icon name="logo-twitter"></ion-icon></button>
+              </ion-fab-list>
+            </ion-fab>
+          </ion-row>
+
+      </ion-col>
+
+      <ion-col col-xl-4 col-lg-6 col-12 align-self-center ion-text color="white">
+        <div [@slideInRight]="canAnimate" class="bio">
+          <p><strong ion-text color="secondary">Sarah Tully</strong> is a web and hybrid application engineer based in Illinois. She has extensive experience developing mobile and web applications using Angular, RxJS, Ionic, Cordova, and Electron.</p>
+          <p>Sarah is an advocate for <a ion-text href="http://www.hrc.org/">Human Rights and the LGBT community</a>.</p> 
+
+          <div class="divider"></div>
+
+          <!-- Work -->
+          <h3 text-uppercase>Work</h3>
+          <p>For the last 4 years Sarah has been developing applications at <a ion-text href="http://www.lextech.com" target="_blank">Lextech Mobile</a>. As technical lead, she and her team develop hybrid mobile applications and web applications for a broad range of highly respected clients including: CDW, DSC Logistics, Anheuser-Busch, Intrawest, AstraZeneca, and MetLife.</p>
+
+          <div class="divider"></div>
+
+          <!-- Projects -->
+          <h3 text-uppercase>Personal Projects</h3>
+          <h4 ion-text color="secondary"><a ion-text href="https://sarahtully.github.io/ng-ionic-animate/" target="_blank">ng-ionic-animate: sarahtully.github.io/ng-ionic-animate/</a></h4>
+          <p>A project Sarah created inspired by one of her favorite animation libraries - <a ion-text href="https://github.com/daneden/animate.css" target="_blank">animate.css</a>. The purpose of this project is to have quick and convenient angular animations at your fingertips.</p>
+
+          <p ion-text color="light" text-small>&copy; 2017 Sarah Tully</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>
+
+
+
+
