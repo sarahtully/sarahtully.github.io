@@ -1,0 +1,82 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #ECEFF1;
+}
+
+p {
+  font-size: 1em;
+}
+
+h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #7B1FA2;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.divider {
+  height: 10px;
+  display: block;
+  opacity: 0.6;
+  background: url('diagonal-separator.png') repeat;
+}
+
+.card {
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 #CFD8DC;
+  margin: 30px;
+}
+
+#brand-avatar {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+#brand-container {
+  width: fit-content;
+  border-radius: 600px;
+  position: relative;
+  margin: 30px auto 0;
+  box-shadow: 0 2px 4px 0 #CFD8DC;
+  overflow: hidden;
+}
+
+#brand-logo {  
+  width: 100%;
+  max-width: 160px;
+  position: absolute;
+  padding: 4px 20px;
+  bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+#copyright {
+  text-align: center;
+  color: #9E9E9E;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.intro {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.intro strong {
+  color: #7B1FA2;
+}
