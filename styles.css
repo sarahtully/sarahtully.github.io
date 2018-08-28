@@ -3,80 +3,32 @@
 }
 
 body {
-  background-color: #ECEFF1;
+  background: url('diagonal-separator.png') repeat-x;
+  background-color: #FFF;
+  margin: 0;
+  padding: 30px;
 }
 
 p {
-  font-size: 1em;
-}
-
-h3 {
-  font-size: 16px;
-  text-transform: uppercase;
+  font-size: 1.4em;
+  line-height: 1.3em;
   font-weight: 400;
-  color: #7B1FA2;
+  padding-top: 20px;
 }
 
-strong {
-  font-weight: 500;
-}
-
-.divider {
-  height: 10px;
-  display: block;
-  opacity: 0.6;
-  background: url('diagonal-separator.png') repeat;
-}
-
-.card {
-  border-radius: 6px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px 0 #CFD8DC;
-  margin: 30px;
-}
-
-#brand-avatar {
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto;
-  display: block;
-}
-
-#brand-container {
-  width: fit-content;
-  border-radius: 600px;
-  position: relative;
-  margin: 30px auto 0;
-  box-shadow: 0 2px 4px 0 #CFD8DC;
-  overflow: hidden;
+.container {
+  max-width: 700px;
+  padding-top: 40px;
 }
 
 #brand-logo {  
   width: 100%;
-  max-width: 160px;
-  position: absolute;
-  padding: 4px 20px;
-  bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.4);
+  max-width: 80px;
 }
 
-#copyright {
-  text-align: center;
-  color: #9E9E9E;
-  font-size: 12px;
-  margin-bottom: 30px;
+a {
+  color: inherit;
 }
 
-.intro {
-  font-size: 20px;
-  font-weight: 300;
-}
 
-.intro strong {
-  color: #7B1FA2;
-}
+
