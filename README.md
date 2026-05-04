@@ -1,3 +1,3 @@
 # SARAH TULLY
 
-### Technical Lead, Senior Software Engineer
+### Technical Lead, Senior Systems Engineer
