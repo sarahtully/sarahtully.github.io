@@ -1,136 +1,206 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35703337-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'UA-35703337-1');
-    </script>
-
     <meta charset="UTF-8" />
-    <title>Sarah Tully | Senior Systems Tech Lead</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarah Tully | Tech Lead</title>
     <meta
       name="description"
-      content="Sarah Tully is a Senior Systems Tech Lead with 15 years of experience delivering enterprise applications across modern web and native Apple platforms."
+      content="Sarah Tully is a tech lead building with AI coding agents, LLMs and ML, with 15 years delivering enterprise applications across modern web and native Apple platforms."
     />
+    <meta name="theme-color" content="#0e0b09" />
+    <link rel="canonical" href="https://www.sarahtully.com/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/landing.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.sarahtully.com/" />
+    <meta property="og:title" content="Sarah Tully | Tech Lead" />
     <meta
-      name="keywords"
-      content="Sarah Tully, Tech Lead, Senior Software Engineer, iOS, React Native, Angular, TypeScript, Swift, Full-Stack Developer"
+      property="og:description"
+      content="Tech lead building with AI coding agents, LLMs and ML, with 15 years delivering enterprise apps across the web and every Apple platform."
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=yes" />
-    <meta name="msapplication-tap-highlight" content="no" />
-
-    <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/icon/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/icon/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/icon/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/icon/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/icon/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/icon/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/icon/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/icon/apple-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon/android-icon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/icon/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png" />
-    <meta name="msapplication-TileColor" content="#FAF3EB" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#1a1412" />
-
+    <meta property="og:image" content="https://www.sarahtully.com/assets/landing.jpg" />
+    <meta property="og:image:width" content="1672" />
+    <meta property="og:image:height" content="941" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      if ('IntersectionObserver' in window) document.documentElement.classList.add('js');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Jost:wght@300;400;500&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
-
-    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Grain texture overlay -->
-    <div class="grain-overlay" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"></div>
 
-    <!-- Navigation -->
-    <nav class="nav">
-      <div class="nav-inner">
-        <a href="#hero" class="nav-logo">ST</a>
-        <div class="nav-links">
+    <header class="header">
+      <div class="wrap">
+        <a href="#top" class="logo">Sarah Tully</a>
+        <nav class="nav" aria-label="Primary">
           <a href="#about">About</a>
-          <a href="#skills">Expertise</a>
+          <a href="#expertise">Expertise</a>
           <a href="#experience">Experience</a>
-          <a href="#contact">Connect</a>
-        </div>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          <a href="#off-the-clock">Photos</a>
+          <a href="#contact">Contact</a>
+          <button class="kbd-btn" type="button" data-open-palette aria-label="Open command menu">
+            <span class="kbd-key">⌘</span>K
+          </button>
+          <button
+            class="motion-btn"
+            type="button"
+            aria-pressed="false"
+            aria-label="Pause animations"
+          >
+            <svg
+              class="icon-pause"
+              viewBox="0 0 16 16"
+              width="14"
+              height="14"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <rect x="3.5" y="3" width="3" height="10" rx="1" />
+              <rect x="9.5" y="3" width="3" height="10" rx="1" />
+            </svg>
+            <svg
+              class="icon-play"
+              viewBox="0 0 16 16"
+              width="14"
+              height="14"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M5 3.2v9.6a.6.6 0 00.9.5l7.4-4.8a.6.6 0 000-1L5.9 2.7a.6.6 0 00-.9.5z" />
+            </svg>
+          </button>
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-      <a href="#about">About</a>
-      <a href="#skills">Expertise</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Connect</a>
-    </div>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <!-- Floating code syntax -->
-      <div class="hero-code-bg" aria-hidden="true">
-        <span class="code-float cf-1">{ }</span>
-        <span class="code-float cf-2">=&gt;</span>
-        <span class="code-float cf-3">func</span>
-        <span class="code-float cf-4">&lt;T&gt;</span>
-        <span class="code-float cf-5">async</span>
-        <span class="code-float cf-6">protocol</span>
-        <span class="code-float cf-7">interface</span>
-        <span class="code-float cf-8">let</span>
-        <span class="code-float cf-9">guard</span>
-        <span class="code-float cf-10">&lt;/&gt;</span>
-        <span class="code-float cf-11">@State</span>
-        <span class="code-float cf-12">import</span>
-      </div>
-      <div class="hero-content">
-        <p class="hero-greeting">Hello, I'm</p>
-        <h1 class="hero-name">Sarah Tully</h1>
-        <div class="hero-rule">
-          <span class="rule-line"></span>
-          <span class="rule-diamond"></span>
-          <span class="rule-line"></span>
+    <main id="main" tabindex="-1">
+      <span id="top"></span>
+      <section class="landing" aria-label="Welcome">
+        <div class="landing-stage">
+          <div class="landing-zoom">
+            <div
+              class="landing-photo"
+              role="img"
+              aria-label="A laptop on a wooden desk at dusk, its screen showing a mountain lake at sunset, framed by trailing pothos plants, a camera, stacked books and candlelight."
+            ></div>
+            <div class="screen">
+              <p class="screen-name">Sarah Tully</p>
+              <p class="screen-role">
+                Tech Lead<span aria-hidden="true">/</span>Agentic Development
+              </p>
+            </div>
+          </div>
         </div>
-        <p class="hero-title">Senior Systems Tech Lead</p>
-        <p class="hero-subtitle">
-          Crafting enterprise experiences across web &amp; native platforms
-        </p>
-      </div>
-      <!-- Scroll indicator -->
-      <div class="scroll-indicator">
-        <span>scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about">
-      <div class="container">
-        <div class="section-label">
-          <span class="label-line"></span>
-          <span class="label-text">About</span>
-          <span class="label-line"></span>
+        <div class="landing-glow" aria-hidden="true"></div>
+        <canvas class="embers" aria-hidden="true"></canvas>
+        <div class="landing-shade" aria-hidden="true"></div>
+        <div class="landing-caption">
+          <a class="landing-scroll" href="#intro">Scroll<span aria-hidden="true"></span></a>
         </div>
-        <div class="about-content">
-          <h2 class="section-heading">Building with <em>intention</em> &amp; craft</h2>
-          <div class="about-text">
+      </section>
+
+      <section class="hero" id="intro">
+        <div class="aurora aurora-1" aria-hidden="true"></div>
+        <div class="aurora aurora-2" aria-hidden="true"></div>
+
+        <div class="wrap hero-grid">
+          <div>
+            <p class="status fade-up" style="--d: 0.05s">
+              <span class="status-dot"></span>Tech Lead at Orthogonal · Illinois
+            </p>
+            <h1 aria-label="Building software people trust.">
+              <span class="word" style="--i: 0">Building</span>
+              <span class="word" style="--i: 1">software</span>
+              <span class="word" style="--i: 2">people</span>
+              <span class="word" style="--i: 3"><span class="rotator">trust.</span></span>
+            </h1>
+            <p class="hero-lede fade-up" style="--d: 0.7s">
+              I'm Sarah, a tech lead bringing agentic development, LLMs and ML into how teams build,
+              backed by 15 years shipping enterprise apps across the web and every Apple platform,
+              now for regulated medical software.
+            </p>
+            <div class="hero-actions fade-up" style="--d: 0.85s">
+              <a
+                class="btn btn-primary magnetic"
+                href="http://www.linkedin.com/in/satully"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+                Connect on LinkedIn<span class="sr-only"> (opens in a new tab)</span>
+              </a>
+              <a class="btn btn-secondary magnetic" href="#experience"
+                >View experience <span aria-hidden="true">→</span></a
+              >
+            </div>
+          </div>
+
+          <div class="code-wrap fade-up" style="--d: 0.5s" aria-hidden="true">
+            <div class="code">
+              <div class="code-bar"><i></i><i></i><i></i><span>SarahTully.swift</span></div>
+              <pre><code class="typed"></code><span class="caret"></span></pre>
+              <div class="toast">
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true">
+                  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M5 8.2l2 2L11 6" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+                Build Succeeded
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <div class="stats">
+          <div class="stat reveal">
+            <div class="stat-value"><span data-count="15">0</span><sup>yrs</sup></div>
+            <div class="stat-label">Building enterprise software</div>
+          </div>
+          <div class="stat reveal" style="--d: 0.1s">
+            <div class="stat-value"><span data-count="11">0</span><sup>+</sup></div>
+            <div class="stat-label">Engineers led on a single team</div>
+          </div>
+          <div class="stat reveal" style="--d: 0.2s">
+            <div class="stat-value"><span data-count="5">0</span></div>
+            <div class="stat-label">Apple platforms shipped, iOS to visionOS</div>
+          </div>
+        </div>
+      </div>
+
+      <section id="about" class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">About</p>
+            <h2>Building with <em>intention</em> &amp; craft</h2>
+          </div>
+          <div class="prose indent reveal">
             <p>
               With 15 years of experience, I deliver enterprise applications across modern web
               technologies and the native Apple ecosystem, including iOS, iPadOS, macOS, watchOS,
@@ -146,394 +216,404 @@
               <strong>Orthogonal</strong>, setting technical direction for Software as a Medical
               Device (SaMD) from architecture through delivery.
             </p>
+            <p>
+              Today much of that work runs through AI: <strong>agentic development</strong> with AI
+              coding agents, <strong>LLM</strong>-powered tooling and <strong>ML</strong>, and MCP
+              servers that connect agents to the systems a team actually uses.
+            </p>
           </div>
         </div>
-        <!-- Decorative divider -->
-        <div class="botanical-divider">
-          <svg viewBox="0 0 200 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="0" y1="15" x2="70" y2="15" stroke="currentColor" stroke-width="0.5" />
-            <path
-              d="M85 15 Q90 5 100 5 Q110 5 115 15 Q110 25 100 25 Q90 25 85 15Z"
-              stroke="currentColor"
-              stroke-width="0.75"
-              fill="none"
-            />
-            <circle cx="100" cy="15" r="2" fill="currentColor" opacity="0.4" />
-            <line x1="130" y1="15" x2="200" y2="15" stroke="currentColor" stroke-width="0.5" />
-          </svg>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Skills / Expertise Section -->
-    <section id="skills" class="section skills section--dark">
-      <div class="container">
-        <div class="section-label">
-          <span class="label-line"></span>
-          <span class="label-text">Expertise</span>
-          <span class="label-line"></span>
-        </div>
-        <h2 class="section-heading">What I <em>bring</em></h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-icon">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect
-                  x="4"
-                  y="8"
-                  width="32"
-                  height="22"
-                  rx="2"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                />
-                <line x1="14" y1="34" x2="26" y2="34" stroke="currentColor" stroke-width="1.5" />
-                <line x1="20" y1="30" x2="20" y2="34" stroke="currentColor" stroke-width="1.5" />
-                <circle cx="20" cy="19" r="1.5" fill="currentColor" opacity="0.4" />
-              </svg>
-            </div>
-            <h3>Full-Stack &amp; Web</h3>
-            <p>
-              Angular, React, TypeScript, Node.js, NestJS, HTML5, CSS3/SCSS. Building responsive,
-              accessible, component-driven interfaces.
-            </p>
+      <section id="expertise" class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">Expertise</p>
+            <h2>What I <em>bring</em> to a team</h2>
           </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect
-                  x="11"
-                  y="4"
-                  width="18"
-                  height="32"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                />
-                <line x1="11" y1="10" x2="29" y2="10" stroke="currentColor" stroke-width="1" />
-                <line x1="11" y1="30" x2="29" y2="30" stroke="currentColor" stroke-width="1" />
-                <circle cx="20" cy="33" r="1.5" fill="currentColor" opacity="0.4" />
-              </svg>
-            </div>
-            <h3>Native &amp; Mobile</h3>
-            <p>
-              Swift, SwiftUI, React Native, Expo, Ionic, Cordova, Electron. From iOS and visionOS to
-              cross-platform apps with native-quality experiences.
-            </p>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.5" />
-                <path d="M20 6 Q28 14 28 20 Q28 26 20 34" stroke="currentColor" stroke-width="1" />
-                <path d="M20 6 Q12 14 12 20 Q12 26 20 34" stroke="currentColor" stroke-width="1" />
-                <line x1="6" y1="16" x2="34" y2="16" stroke="currentColor" stroke-width="0.75" />
-                <line x1="6" y1="24" x2="34" y2="24" stroke="currentColor" stroke-width="0.75" />
-              </svg>
-            </div>
-            <h3>IoT &amp; Real-Time</h3>
-            <p>
-              Bluetooth/BLE, WebRTC, WebSockets, push notifications. Connecting devices and enabling
-              real-time communication.
-            </p>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20 4 L36 14 L36 28 L20 38 L4 28 L4 14 Z"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  fill="none"
-                />
-                <path d="M20 4 L20 38" stroke="currentColor" stroke-width="0.75" />
-                <path d="M4 14 L36 28" stroke="currentColor" stroke-width="0.75" opacity="0.5" />
-                <path d="M36 14 L4 28" stroke="currentColor" stroke-width="0.75" opacity="0.5" />
-              </svg>
-            </div>
-            <h3>Architecture &amp; Leadership</h3>
-            <p>
-              System design, C4 diagrams, SDLC ownership, team mentorship. Leading teams of 11+
-              engineers from concept to delivery.
-            </p>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8 32 L8 16 Q8 8 16 8 L24 8 Q32 8 32 16 L32 32"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  fill="none"
-                />
-                <line x1="14" y1="16" x2="26" y2="16" stroke="currentColor" stroke-width="1" />
-                <line x1="14" y1="21" x2="26" y2="21" stroke="currentColor" stroke-width="1" />
-                <line x1="14" y1="26" x2="22" y2="26" stroke="currentColor" stroke-width="1" />
-                <circle
-                  cx="28"
-                  cy="30"
-                  r="6"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  fill="none"
-                />
-                <path d="M26 30 L28 32 L31 28" stroke="currentColor" stroke-width="1.5" />
-              </svg>
-            </div>
-            <h3>Healthcare &amp; Compliance</h3>
-            <p>HIPAA-compliant apps, PHI handling, SaMD, Regulated software.</p>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle
-                  cx="20"
-                  cy="14"
-                  r="4"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  fill="none"
-                />
-                <path
-                  d="M8 36 Q8 24 20 24 Q32 24 32 36"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  fill="none"
-                />
-                <path d="M28 10 L34 10" stroke="currentColor" stroke-width="1.5" />
-                <path d="M31 7 L31 13" stroke="currentColor" stroke-width="1.5" />
-                <circle cx="10" cy="10" r="2" stroke="currentColor" stroke-width="1" fill="none" />
-              </svg>
-            </div>
-            <h3>AI &amp; Innovation</h3>
-            <p>
-              AI coding agents, LLM-assisted tooling, MCP servers, OpenAI APIs. Integrating AI to
-              accelerate workflows and delivery.
-            </p>
+          <div class="grid">
+            <article class="card card--feature reveal">
+              <div class="feature-copy">
+                <div class="card-top">
+                  <span class="card-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="badge">Current focus</span>
+                </div>
+                <h3>Agentic development, LLMs &amp; ML</h3>
+                <p>
+                  Building with AI coding agents and bringing them into how teams work: LLM-powered
+                  tooling, machine learning, and MCP servers that connect agents to real systems.
+                  All of it delivered with the review discipline regulated software demands.
+                </p>
+                <ul class="tags">
+                  <li>Agentic development</li>
+                  <li>AI coding agents</li>
+                  <li>LLMs</li>
+                  <li>Machine learning</li>
+                  <li>MCP servers</li>
+                  <li>OpenAI API</li>
+                </ul>
+              </div>
+              <div class="agent-run" aria-hidden="true">
+                <div class="agent-bar"><span class="agent-dot"></span>agent · run</div>
+                <ol class="agent-steps">
+                  <li class="agent-step">
+                    <span class="agent-mark"></span
+                    ><span><b>task</b> add retry logic to device sync</span>
+                  </li>
+                  <li class="agent-step">
+                    <span class="agent-mark"></span
+                    ><span><b>plan</b> 4 steps · reading 14 files</span>
+                  </li>
+                  <li class="agent-step">
+                    <span class="agent-mark"></span><span><b>mcp</b> github · jira · docs</span>
+                  </li>
+                  <li class="agent-step">
+                    <span class="agent-mark"></span><span><b>test</b> 12 new, all passing</span>
+                  </li>
+                  <li class="agent-step">
+                    <span class="agent-mark"></span><span><b>pr</b> opened for human review</span>
+                  </li>
+                </ol>
+              </div>
+            </article>
+            <article class="card card--wide reveal">
+              <div class="card-top">
+                <span class="card-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z" />
+                    <path d="M12 9v6M9 12h6" />
+                  </svg>
+                </span>
+                <span class="card-num" aria-hidden="true">02</span>
+              </div>
+              <h3>Regulated healthcare software</h3>
+              <p>
+                Software as a Medical Device, taken from architecture through delivery. Years of
+                HIPAA-compliant apps and PHI handling, built for teams where getting it right is the
+                requirement.
+              </p>
+              <ul class="tags">
+                <li>SaMD</li>
+                <li>HIPAA</li>
+                <li>PHI</li>
+                <li>Regulated software</li>
+              </ul>
+            </article>
+            <article class="card reveal" style="--d: 0.08s">
+              <div class="card-top">
+                <span class="card-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="12" cy="7" r="3" />
+                    <circle cx="5" cy="16" r="2.2" />
+                    <circle cx="19" cy="16" r="2.2" />
+                    <path d="M10 9.5L6.3 14M14 9.5l3.7 4.5M7.2 16h9.6" />
+                  </svg>
+                </span>
+                <span class="card-num" aria-hidden="true">03</span>
+              </div>
+              <h3>Technical leadership</h3>
+              <p>
+                Leading 11+ engineers across mobile, web, backend and IoT. System design, C4
+                architecture, SDLC ownership and mentoring.
+              </p>
+              <ul class="tags">
+                <li>Architecture</li>
+                <li>C4</li>
+                <li>Mentorship</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <div class="card-top">
+                <span class="card-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M3 9.5C3 7.6 4.6 6 6.5 6h11C19.4 6 21 7.6 21 9.5v3c0 2.5-2 4.5-4.5 4.5-1.6 0-2.5-.9-3.2-2-.4-.6-.8-1-1.3-1s-.9.4-1.3 1c-.7 1.1-1.6 2-3.2 2C5 17 3 15 3 12.5v-3z"
+                    />
+                  </svg>
+                </span>
+                <span class="card-num" aria-hidden="true">04</span>
+              </div>
+              <h3>Every Apple platform</h3>
+              <p>
+                iOS, iPadOS, macOS, watchOS and visionOS, including work as an early visionOS
+                developer.
+              </p>
+              <ul class="tags">
+                <li>Swift</li>
+                <li>SwiftUI</li>
+                <li>visionOS</li>
+              </ul>
+            </article>
+            <article class="card reveal" style="--d: 0.08s">
+              <div class="card-top">
+                <span class="card-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M4 20l4-1 10.5-10.5a2.1 2.1 0 00-3-3L5 16l-1 4z" />
+                    <path d="M13.5 7.5l3 3" />
+                  </svg>
+                </span>
+                <span class="card-num" aria-hidden="true">05</span>
+              </div>
+              <h3>Design-minded engineering</h3>
+              <p>
+                Started as a UX/UI and graphic designer. Still builds with a designer's eye:
+                accessible, component-driven interfaces across React and Angular.
+              </p>
+              <ul class="tags">
+                <li>UX/UI</li>
+                <li>Design systems</li>
+                <li>React</li>
+                <li>Angular</li>
+              </ul>
+            </article>
+            <article class="card reveal" style="--d: 0.16s">
+              <div class="card-top">
+                <span class="card-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M5 12a7 7 0 0114 0M8 12a4 4 0 018 0" />
+                    <circle cx="12" cy="12" r="1.2" fill="currentColor" />
+                    <path d="M12 13v8" />
+                  </svg>
+                </span>
+                <span class="card-num" aria-hidden="true">06</span>
+              </div>
+              <h3>Connected &amp; real-time</h3>
+              <p>
+                Connecting devices over Bluetooth and BLE, and building live collaboration over
+                WebRTC and WebSockets.
+              </p>
+              <ul class="tags">
+                <li>Bluetooth / BLE</li>
+                <li>WebRTC</li>
+                <li>IoT</li>
+              </ul>
+            </article>
           </div>
         </div>
 
-        <div class="tech-stack">
-          <h3 class="tech-stack-heading">Tech Stack</h3>
-          <div class="tech-pills">
-            <span class="tech-pill">React</span>
-            <span class="tech-pill">TypeScript</span>
-            <span class="tech-pill">JavaScript</span>
-            <span class="tech-pill">Angular</span>
-            <span class="tech-pill">Swift</span>
-            <span class="tech-pill">SwiftUI</span>
-            <span class="tech-pill">React Native</span>
-            <span class="tech-pill">Node.js</span>
-            <span class="tech-pill">iOS</span>
-            <span class="tech-pill">HTML5</span>
-            <span class="tech-pill">CSS3 / SCSS</span>
-            <span class="tech-pill">Expo / Electron / Cordova</span>
-            <span class="tech-pill">Reactive Architecture</span>
-            <span class="tech-pill">CI/CD</span>
-            <span class="tech-pill">Git</span>
-            <span class="tech-pill">WebRTC</span>
-            <span class="tech-pill">WebSockets</span>
-            <span class="tech-pill">Bluetooth / BLE</span>
-            <span class="tech-pill">AI/ML</span>
-            <span class="tech-pill">visionOS</span>
-            <span class="tech-pill">MCPs</span>
-            <span class="tech-pill">Design frameworks</span>
-          </div>
+        <h3 class="sr-only">Tech stack</h3>
+        <div class="marquee">
+          <div
+            class="marquee-row"
+            role="list"
+            data-items="Agentic development,LLMs,Machine learning,MCP servers,AI coding agents,OpenAI API,React,TypeScript,Swift,SwiftUI,Angular"
+          ></div>
+          <div
+            class="marquee-row reverse"
+            role="list"
+            data-items="React Native,Node.js,iOS,visionOS,JavaScript,HTML5,CSS3 / SCSS,Expo,Electron,Cordova,Reactive Architecture,CI/CD,Git,WebRTC,WebSockets,Bluetooth / BLE"
+          ></div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section experience">
-      <div class="container">
-        <div class="section-label">
-          <span class="label-line"></span>
-          <span class="label-text">Experience</span>
-          <span class="label-line"></span>
+      <section id="experience" class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">Experience</p>
+            <h2>Where I've <em>been</em></h2>
+          </div>
+          <div class="jobs">
+            <span class="rail" aria-hidden="true"></span>
+            <span class="rail-fill" aria-hidden="true"></span>
+            <ol style="list-style: none">
+              <li class="job reveal">
+                <span class="job-date">2025 — Present</span>
+                <div>
+                  <div class="job-title">
+                    <h3>Senior Software Engineer II, Tech Lead</h3>
+                    <span class="badge">Current</span>
+                  </div>
+                  <p class="job-company">Orthogonal</p>
+                  <p>
+                    Leading a cross-functional team of engineers building SaMD across mobile, web,
+                    backend, and IoT. Setting technical direction from architecture through delivery
+                    in a regulated healthcare environment.
+                  </p>
+                </div>
+              </li>
+              <li class="job reveal">
+                <span class="job-date">2013 — 2025</span>
+                <div>
+                  <div class="job-title"><h3>Senior Systems Tech Lead</h3></div>
+                  <p class="job-company">Lextech</p>
+                  <p>
+                    Led enterprise application development across the Apple ecosystem and modern web
+                    for Healthcare, Aviation, and Manufacturing. Early visionOS developer. Built
+                    HIPAA-compliant healthcare apps and internationalized applications.
+                  </p>
+                </div>
+              </li>
+              <li class="job reveal">
+                <span class="job-date">2021 — 2022</span>
+                <div>
+                  <div class="job-title"><h3>Systems Tech Lead</h3></div>
+                  <p class="job-company">LexGo</p>
+                  <p>
+                    Led development of a virtual collaboration platform with WebRTC and
+                    WebSocket-based real-time communication across native iOS and web/desktop.
+                  </p>
+                </div>
+              </li>
+              <li class="job reveal">
+                <span class="job-date">2012 — 2013</span>
+                <div>
+                  <div class="job-title"><h3>Web Developer &amp; UX/UI Designer</h3></div>
+                  <p class="job-company">WarmlyYours</p>
+                  <p>
+                    Designed and developed a custom, responsive e-commerce platform using HTML5,
+                    Sass, JavaScript, and Bootstrap. Improved site performance, SEO, and user
+                    experience.
+                  </p>
+                </div>
+              </li>
+              <li class="job reveal">
+                <span class="job-date">2011 — 2012</span>
+                <div>
+                  <div class="job-title"><h3>Web Developer &amp; Graphic Designer</h3></div>
+                  <p class="job-company">JMS Marketing, Inc</p>
+                  <p>
+                    Designed and built custom websites using HTML, CSS, PHP, and JavaScript,
+                    focusing on responsive design and UX. Maintained brand consistency and
+                    usability.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
         </div>
-        <h2 class="section-heading">Where I've <em>been</em></h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2025 - Present</span>
-              <h3>Senior Software Engineer II, Tech Lead</h3>
-              <p class="timeline-company">Orthogonal</p>
-              <p>
-                Leading a cross-functional team of engineers building SaMD across mobile, web,
-                backend, and IoT. Setting technical direction from architecture through delivery in
-                a regulated healthcare environment.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2013 - 2025</span>
-              <h3>Senior Systems Tech Lead</h3>
-              <p class="timeline-company">Lextech</p>
-              <p>
-                Led enterprise application development across the Apple ecosystem and modern web for
-                Healthcare, Aviation, and Manufacturing. Early visionOS developer. Built
-                HIPAA-compliant healthcare apps and internationalized applications.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2021 - 2022</span>
-              <h3>Systems Tech Lead</h3>
-              <p class="timeline-company">LexGo</p>
-              <p>
-                Led development of a virtual collaboration platform with WebRTC and WebSocket-based
-                real-time communication across native iOS and web/desktop.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2012 - 2013</span>
-              <h3>Web Developer &amp; UX/UI Designer</h3>
-              <p class="timeline-company">WarmlyYours</p>
-              <p>
-                Designed and developed a custom, responsive e-commerce platform using HTML5, Sass,
-                JavaScript, and Bootstrap. Improved site performance, SEO, and user experience.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2011 - 2012</span>
-              <h3>Web Developer &amp; Graphic Designer</h3>
-              <p class="timeline-company">JMS Marketing, Inc</p>
-              <p>
-                Designed and built custom websites using HTML, CSS, PHP, and JavaScript, focusing on
-                responsive design and UX. Maintained brand consistency and usability.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact section--dark">
-      <div class="container">
-        <div class="contact-content">
-          <div class="section-label">
-            <span class="label-line"></span>
-            <span class="label-text">Connect</span>
-            <span class="label-line"></span>
+      <section id="off-the-clock" class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">Off the clock</p>
+            <h2>Life beyond the <em>screen</em></h2>
           </div>
-          <h2 class="contact-heading">Let's <em>work together</em></h2>
-          <p class="contact-blurb">Have a project in mind or want to chat about tech?</p>
-          <div class="contact-links">
+          <p class="photos-intro reveal">
+            Photos I've taken away from the keyboard: travel, nature, and good food.
+          </p>
+          <ul class="photo-grid" aria-label="Personal photos" aria-busy="true"></ul>
+          <div class="photos-more">
+            <button class="btn btn-secondary" type="button" hidden>Show more photos</button>
+            <p class="photos-count" aria-live="polite"></p>
+          </div>
+          <p class="photos-note" hidden></p>
+        </div>
+      </section>
+
+      <dialog class="lightbox" aria-label="Photo viewer">
+        <figure>
+          <img alt="" />
+          <figcaption class="lightbox-bar">
+            <span class="lightbox-caption"></span>
+            <span class="lightbox-count"></span>
+            <span class="lightbox-btns">
+              <button type="button" data-step="-1" aria-label="Previous photo">←</button>
+              <button type="button" data-step="1" aria-label="Next photo">→</button>
+              <button type="button" data-close aria-label="Close">✕</button>
+            </span>
+          </figcaption>
+        </figure>
+      </dialog>
+
+      <section id="contact" class="contact">
+        <div class="contact-photo" aria-hidden="true"></div>
+        <div class="wrap">
+          <p class="eyebrow reveal" style="padding-top: 0">Contact</p>
+          <h2 class="reveal">Let's <em>work together</em>.</h2>
+          <p class="reveal">
+            Have a project in mind or want to talk tech? I'm always happy to connect.
+          </p>
+          <div class="hero-actions reveal">
             <a
+              class="btn btn-primary magnetic"
               href="http://www.linkedin.com/in/satully"
-              class="contact-link"
               target="_blank"
               rel="noopener"
             >
-              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                />
-              </svg>
-              <span>LinkedIn</span>
+              Connect on LinkedIn<span class="sr-only"> (opens in a new tab)</span>
+              <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
-        <p class="contact-footnote">Based in Illinois · Working remotely</p>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer section--dark">
-      <div class="container">
-        <div class="botanical-divider">
-          <svg viewBox="0 0 200 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="0" y1="15" x2="70" y2="15" stroke="currentColor" stroke-width="0.5" />
-            <path
-              d="M85 15 Q90 5 100 5 Q110 5 115 15 Q110 25 100 25 Q90 25 85 15Z"
-              stroke="currentColor"
-              stroke-width="0.75"
-              fill="none"
-            />
-            <circle cx="100" cy="15" r="2" fill="currentColor" opacity="0.4" />
-            <line x1="130" y1="15" x2="200" y2="15" stroke="currentColor" stroke-width="0.5" />
-          </svg>
-        </div>
-        <p>&copy; 2026 Sarah Tully</p>
+    <footer class="footer">
+      <div class="wrap">
+        <span>© 2026 Sarah Tully</span>
+        <span
+          >Based in Illinois · Working remotely<span class="kbd-hint">
+            · Press <kbd>⌘K</kbd> to navigate</span
+          ></span
+        >
       </div>
     </footer>
 
-    <script>
-      // Mobile nav toggle
-      const toggle = document.querySelector('.nav-toggle');
-      const mobileMenu = document.querySelector('.mobile-menu');
-      toggle.addEventListener('click', () => {
-        toggle.classList.toggle('active');
-        mobileMenu.classList.toggle('open');
-      });
-      // Close mobile menu on link click
-      mobileMenu.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          toggle.classList.remove('active');
-          mobileMenu.classList.remove('open');
-        });
-      });
-      // Smooth scroll
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      });
-      // Nav background on scroll
-      const nav = document.querySelector('.nav');
-      window.addEventListener('scroll', () => {
-        nav.classList.toggle('scrolled', window.scrollY > 60);
-      });
-      // Fade-in on scroll
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        },
-        { threshold: 0.15 },
-      );
-      document
-        .querySelectorAll('.skill-card, .timeline-item, .about-content, .contact-link')
-        .forEach((el) => {
-          observer.observe(el);
-        });
+    <dialog class="palette" aria-label="Command menu">
+      <input
+        type="text"
+        placeholder="Where to?"
+        aria-label="Jump to a section"
+        role="combobox"
+        aria-expanded="true"
+        aria-controls="palette-list"
+        aria-autocomplete="list"
+      />
+      <ul id="palette-list" role="listbox" aria-label="Destinations"></ul>
+      <div class="palette-hint">
+        <span>↑↓ navigate</span><span>↵ open</span><span>esc close</span>
+      </div>
+    </dialog>
 
-      // Staggered fade-in for tech pills
-      const pillObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const pills = entry.target.querySelectorAll('.tech-pill');
-              pills.forEach((pill, i) => {
-                setTimeout(() => pill.classList.add('visible'), i * 60);
-              });
-              pillObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.2 },
-      );
-      const techPills = document.querySelector('.tech-pills');
-      if (techPills) pillObserver.observe(techPills);
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
