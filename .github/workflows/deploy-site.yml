@@ -1,0 +1,67 @@
+name: Build and deploy site
+
+# Photos are pulled from Google Drive at build time and published with the site, but never
+# committed, so a photo deleted from Drive leaves no copy in this public repo's history.
+# Requires Settings → Pages → Source: "GitHub Actions".
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: '17 8 * * *' # daily, around 3am Central, to pick up new photos
+  workflow_dispatch: # "Run workflow" button for an immediate refresh
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write # lets the job prove to Google it is this repo (keyless sign-in)
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/requirements-photos.txt
+
+      - run: pip install -r scripts/requirements-photos.txt
+
+      # Short-lived Google credentials for the read-only photo-sync account; no stored keys.
+      # Google only accepts this repo (ID 90682801) on master.
+      - uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/258442962886/locations/global/workloadIdentityPools/github/providers/github-actions
+          service_account: photo-sync@sarahtully-site.iam.gserviceaccount.com
+
+      - name: Fetch photos
+        run: python scripts/sync_photos.py
+        env:
+          GDRIVE_FOLDER_ID: 1y92Wyf2ntGh-ir2uFpfNQYwzAonH9YUL
+
+      - name: Assemble site
+        run: |
+          mkdir _site
+          cp index.html styles.css main.js CNAME _site/
+          cp -r assets photos _site/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

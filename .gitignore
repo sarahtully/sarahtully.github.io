@@ -1,3 +1,7 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Built at deploy time from the Google Drive folder; never committed
+photos/
+_site/

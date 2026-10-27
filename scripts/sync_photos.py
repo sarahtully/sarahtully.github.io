@@ -1,8 +1,10 @@
-"""Sync the "Off the clock" photos from a private Google Drive folder into photos/.
+"""Fetch the "Off the clock" photos from a private Google Drive folder into photos/.
 
-Runs nightly in GitHub Actions (.github/workflows/sync-photos.yml). For each image in the folder it
-writes two web-sized WebP files with all metadata removed (including GPS location) and records them
-in photos/photos.json, newest first. Photos deleted from the folder are removed from the site.
+Runs in GitHub Actions on every deploy and nightly (.github/workflows/deploy-site.yml); the output
+is published with the site but never committed. For each image in the folder it writes two
+web-sized WebP files with all metadata removed (including GPS location) and records them in
+photos/photos.json, newest first. Photos deleted from the folder are removed from the site.
+Workflow logs are public, so nothing here prints file names or captions.
 
 Credentials are keyless: in GitHub Actions, google-github-actions/auth trades the workflow's
 GitHub identity for short-lived Google credentials for the read-only photo-sync service account.
@@ -102,7 +104,7 @@ def sync(drive, folder_id):
             try:
                 paths, (w, h) = render(download(drive, file['id']), file['id'])
             except Exception as error:  # one bad file shouldn't stop the sync
-                print(f"Skipping {file['name']}: {error}", file=sys.stderr)
+                print(f"Skipping Drive file {file['id']}: {type(error).__name__}", file=sys.stderr)
                 continue
             entry = {'id': file['id'], **paths, 'w': w, 'h': h, 'modified': file['modifiedTime']}
             added, updated = (added + 1, updated) if not known else (added, updated + 1)

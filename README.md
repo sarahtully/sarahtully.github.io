@@ -6,16 +6,19 @@ www.sarahtully.com
 
 ## Off the clock photos
 
-The photo grid is filled from a private Google Drive folder. Every night a GitHub Action
-(`.github/workflows/sync-photos.yml`) copies new photos into `photos/`, resized for the web with
-all metadata (including GPS location) removed. Photos deleted from the folder disappear from the
-site on the next sync. The site itself never talks to Google.
+The photo grid is filled from a private Google Drive folder. On every deploy and once a night, a
+GitHub Action (`.github/workflows/deploy-site.yml`) fetches the photos, resizes them for the web
+with all metadata (including GPS location) removed, and publishes them with the site. Photos are
+never committed, so one deleted from the folder is gone from the site and leaves no copy in this
+repo's history. The site itself never talks to Google.
+
+Requires **Settings → Pages → Source: GitHub Actions**.
 
 - **Add a photo:** drop it in the Drive folder (JPEG, PNG or iPhone HEIC).
 - **Caption:** in Drive, right-click the photo → File information → Details → Description. It
   becomes the caption and the text screen readers announce.
 - **Order:** newest first, by the date the photo was taken.
-- **Sync now:** GitHub → Actions → Sync photos from Google Drive → Run workflow.
+- **Sync now:** GitHub → Actions → Build and deploy site → Run workflow.
 
 Photo sync uses keyless sign-in, so there are no keys or secrets to manage. To stop syncing, remove
 the sync account from the Drive folder's sharing.
