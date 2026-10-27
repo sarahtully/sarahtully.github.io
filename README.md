@@ -17,20 +17,8 @@ site on the next sync. The site itself never talks to Google.
 - **Order:** newest first, by the date the photo was taken.
 - **Sync now:** GitHub → Actions → Sync photos from Google Drive → Run workflow.
 
-### How it's connected (already set up)
-
-No keys or secrets are stored anywhere. The workflow signs in to Google with its GitHub identity
-(Workload Identity Federation) and gets short-lived credentials for a read-only account.
-
-- **Google Cloud project:** `sarahtully-site` (no billing needed)
-- **Service account:** `photo-sync@sarahtully-site.iam.gserviceaccount.com`, with no project
-  roles; it can only read the Drive folder shared with it
-- **Drive folder:** `sarahtully.com`, private, shared with `photo-sync` as Viewer
-- **Who can use it:** only this repo (ID `90682801`) running on `master`, via the
-  `github` pool's `github-actions` provider
-
-To stop syncing, remove `photo-sync` from the folder's sharing, or delete the
-`sarahtully-site` project in Google Cloud Console.
+Photo sync uses keyless sign-in, so there are no keys or secrets to manage. To stop syncing, remove
+the sync account from the Drive folder's sharing.
 
 ### Preview locally
 
