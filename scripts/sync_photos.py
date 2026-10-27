@@ -4,9 +4,11 @@ Runs nightly in GitHub Actions (.github/workflows/sync-photos.yml). For each ima
 writes two web-sized WebP files with all metadata removed (including GPS location) and records them
 in photos/photos.json, newest first. Photos deleted from the folder are removed from the site.
 
+Credentials are keyless: in GitHub Actions, google-github-actions/auth trades the workflow's
+GitHub identity for short-lived Google credentials for the read-only photo-sync service account.
+
 Environment:
-  GDRIVE_SERVICE_ACCOUNT_JSON  the service account's JSON key (a GitHub secret)
-  GDRIVE_FOLDER_ID             the Drive folder's ID (a GitHub secret)
+  GDRIVE_FOLDER_ID  the Drive folder's ID
 """
 
 import io
@@ -33,13 +35,10 @@ FIELDS = 'nextPageToken, files(id, name, description, createdTime, modifiedTime,
 
 
 def drive_client():
-    from google.oauth2 import service_account
+    import google.auth
     from googleapiclient.discovery import build
 
-    info = json.loads(os.environ['GDRIVE_SERVICE_ACCOUNT_JSON'])
-    creds = service_account.Credentials.from_service_account_info(
-        info, scopes=['https://www.googleapis.com/auth/drive.readonly']
-    )
+    creds, _ = google.auth.default(scopes=['https://www.googleapis.com/auth/drive.readonly'])
     return build('drive', 'v3', credentials=creds, cache_discovery=False)
 
 

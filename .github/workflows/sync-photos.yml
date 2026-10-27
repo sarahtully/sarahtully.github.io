@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pages: write
+  id-token: write # lets the job prove to Google it is this repo (keyless sign-in)
 
 concurrency: sync-photos
 
@@ -25,11 +26,18 @@ jobs:
 
       - run: pip install -r scripts/requirements-photos.txt
 
+      # Short-lived Google credentials for the read-only photo-sync account; no stored keys.
+      # Google only accepts this repo (ID 90682801) on master.
+      - uses: google-github-actions/auth@v2
+        with:
+          # TODO: replace PROJECT_NUMBER once the sarahtully-site project exists
+          workload_identity_provider: projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/github/providers/github-actions
+          service_account: photo-sync@sarahtully-site.iam.gserviceaccount.com
+
       - name: Sync photos
         run: python scripts/sync_photos.py
         env:
-          GDRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
-          GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
+          GDRIVE_FOLDER_ID: 1y92Wyf2ntGh-ir2uFpfNQYwzAonH9YUL
 
       - name: Commit changes
         id: commit
