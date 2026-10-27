@@ -1619,6 +1619,7 @@ body::after {
 }
 
 .contact h2 em {
+  margin-right: -0.14em; /* the italic's trailing space leaves a gap before the period */
   background-size: 200% 100%;
   background-image: linear-gradient(
     100deg,
