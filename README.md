@@ -17,22 +17,20 @@ site on the next sync. The site itself never talks to Google.
 - **Order:** newest first, by the date the photo was taken.
 - **Sync now:** GitHub → Actions → Sync photos from Google Drive → Run workflow.
 
-### One-time setup
+### How it's connected (already set up)
 
-1. In [Google Cloud Console](https://console.cloud.google.com), create a project and enable the
-   **Google Drive API** (APIs & Services → Library).
-2. APIs & Services → Credentials → Create credentials → **Service account**. Name it
-   (e.g. `photo-sync`); it needs no roles.
-3. Open the service account → Keys → Add key → Create new key → **JSON**. A file downloads.
-4. Share the Drive folder with the service account's email
-   (`photo-sync@<project>.iam.gserviceaccount.com`) as **Viewer**. The folder stays private.
-5. In this repo: Settings → Secrets and variables → Actions → New repository secret:
-   - `GDRIVE_SERVICE_ACCOUNT_JSON`: the entire contents of the JSON key file
-   - `GDRIVE_FOLDER_ID`: the ID at the end of the folder's link
-     (`https://drive.google.com/drive/folders/<this part>`)
-6. Run the workflow once from the Actions tab to pull in the first photos.
+No keys or secrets are stored anywhere. The workflow signs in to Google with its GitHub identity
+(Workload Identity Federation) and gets short-lived credentials for a read-only account.
 
-Delete the downloaded JSON key file once it's saved as a secret.
+- **Google Cloud project:** `sarahtully-site` (no billing needed)
+- **Service account:** `photo-sync@sarahtully-site.iam.gserviceaccount.com`, with no project
+  roles; it can only read the Drive folder shared with it
+- **Drive folder:** `sarahtully.com`, private, shared with `photo-sync` as Viewer
+- **Who can use it:** only this repo (ID `90682801`) running on `master`, via the
+  `github` pool's `github-actions` provider
+
+To stop syncing, remove `photo-sync` from the folder's sharing, or delete the
+`sarahtully-site` project in Google Cloud Console.
 
 ### Preview locally
 

@@ -30,8 +30,7 @@ jobs:
       # Google only accepts this repo (ID 90682801) on master.
       - uses: google-github-actions/auth@v2
         with:
-          # TODO: replace PROJECT_NUMBER once the sarahtully-site project exists
-          workload_identity_provider: projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/github/providers/github-actions
+          workload_identity_provider: projects/258442962886/locations/global/workloadIdentityPools/github/providers/github-actions
           service_account: photo-sync@sarahtully-site.iam.gserviceaccount.com
 
       - name: Sync photos
